@@ -17,7 +17,7 @@ Copy the GitHub access token, open the PIPEFORCE portal and go to `LOW CODE -> C
 
 Authorization: token COPY_YOUR_TOKEN_HERE
 
-# Step 3: Install the example apps
+## Step 3: Install the example apps
 
 Copy and paste this pipeline into your online workbench:
 
