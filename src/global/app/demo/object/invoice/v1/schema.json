@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "documentType": {
+      "title": "Type",
+      "type": "string",
+      "description": "The type of this document to add.",
+      "enum": [
+        "invoice",
+        "credit"
+      ]
+    },
+    "amount": {
+      "title": "Amount",
+      "type": "number",
+      "description": "The amount on the invoice / credit."
+    },
+    "uuid": {
+      "type": "string",
+      "description": "The unique id of this entry, automatically generated at server side."
+    },
+    "supplier": {
+      "title": "Supplier",
+      "type": "string",
+      "piStyle": {
+        "href": "#/form?key=global%2Fapp%2Fdemo%2Fform%2Finvoice&input=property.list%3Ffilter%3Dglobal%2Fapp%2Fdemo%2Fobject%2Finvoice%2Fv1%2Finstance%2F${row.uuid}&output=global%2Fapp%2Fdemo%2Fobject%2Finvoice%2Fv1%2Finstance%2F${row.uuid}"
+      },
+      "description": "The unique name of the supplier."
+    },
+    "credits": {
+      "title": "Credits",
+      "type": "array",
+      "description": "The selected credits to clear with this invoice.",
+      "items": {
+        "type": "string",
+        "enum": []
+      }
+    },
+    "clearedAmount": {
+      "title": "Unpaid",
+      "type": "number",
+      "description": "The money to pay to supplier after credits have been subtracted."
+    },
+    "paid": {
+      "type": "boolean",
+      "piStyle": {
+        "hidden": true
+      },
+      "description": "True, if this invoice / credit was already processed and cleared."
+    },
+    "buttonYes": {
+      "type": "boolean",
+      "title": "Accept",
+      "description": "Some accepted text."
+    },
+    "buttonNo": {
+      "type": "boolean"
+    },
+    "file1": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "pdfFile": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

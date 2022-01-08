@@ -1,0 +1,18 @@
+pipeline:
+
+  # Listen for form submit
+  - event.listen:
+      key: "property.created"
+      filter: "#{body.target.key.contains('global/app/barcode/object/barcode/v1/instance')}"
+
+  # Store form data in a variable
+  - set:
+      input: "#{body.target.value}"
+      output: "#{vars.form}"
+
+  - barcode.create:
+      format: "#{vars.form.barcodeFormat}"
+      text: "#{vars.form.barcodeText}"
+
+  - drive.save:
+      path: "#{vars.form.barcodeName}.png"

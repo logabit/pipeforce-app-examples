@@ -1,0 +1,12 @@
+{
+  "title": "Demo App",
+  "description": "Sample forms and lists.",
+  "icon": "assignment",
+  "tags": [
+    "demo"
+  ],
+  "show": "CAN_APP_DEMO",
+  "editions": [
+    "enterprise"
+  ]
+}

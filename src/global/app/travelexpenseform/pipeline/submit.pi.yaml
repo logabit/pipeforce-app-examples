@@ -1,0 +1,12 @@
+pipeline:
+  - event.listen:
+      key: "property.created"
+      filter: "#{body.target.key.contains('global/app/travelexpenseform/object/travelexpenseform/v1/instance')}"
+  - property.send.delivery:
+      key: "#{body.target.key}"
+      message: "uri:property:global/app/travelexpenseform/template/travelexpenseform-message"
+      subject: "Formular Reisekostenerstattung wurde ausgefüllt"
+      model: "uri:property:#{body.target.key}"
+      privacyLevel: "L02_CREDENTIALS"
+      recipients:
+        - "#{@property.lazy('global/app/travelexpenseform/config/travelexpenseform#recipient')}"

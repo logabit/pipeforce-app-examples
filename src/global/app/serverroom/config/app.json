@@ -1,0 +1,10 @@
+{
+  "title": "Serverraum",
+  "description": "Zugang zum Serverraum protokollieren.",
+  "icon": "storage",
+  "tags": [
+  ],
+  "show": "CAN_APP_SERVERROOM",
+  "emails": ["s.niedermeier@logabit.com"],
+  "editions": ["basic", "enterprise"]
+}

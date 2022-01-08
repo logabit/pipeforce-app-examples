@@ -1,0 +1,41 @@
+{
+  "id": "accessrequestform",
+  "public": false,
+  "title": "Neuer IT-Zugang",
+  "description": "Bitte nutzen Sie das Formular, um Zugriff auf IT-Ressourcen anzufordern.",
+  "schema": "property.list?filter=global/app/itsupport/object/accessrequestform/v1/schema",
+  "output": "global/app/itsupport/object/accessrequestform/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "antragsteller",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "abteilung",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "zugriffTyp"
+      },
+      {
+        "field": "typBeschreibung"
+      },
+      {
+        "field": "bedarfAb"
+      },
+      {
+        "field": "kommentar"
+      }
+    ]
+  }
+}

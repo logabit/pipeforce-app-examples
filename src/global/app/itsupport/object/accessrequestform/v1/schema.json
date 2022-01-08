@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "antragsteller": {
+      "type": "string",
+      "title": "Ihr Name *",
+      "description": "Vorname, Nachname"
+    },
+    "abteilung": {
+      "type": "string",
+      "title": "Ihre Abteilung *",
+      "description": "Ihre Abteilung"
+    },
+    "zugriffTyp": {
+      "type": "string",
+      "title": "Zugriff-Typ",
+      "description": "Auf welche Ressource benötigen Sie Zugriff?",
+      "enum": [
+        "System",
+        "Laufwerk",
+        "Programm",
+        "Andere"
+      ]
+    },
+    "typBeschreibung": {
+      "type": "string",
+      "title": "Typ-Beschreibung",
+      "description": "Genauere Beschreibung der Ressource."
+    },
+    "bedarfAb": {
+      "type": "string",
+      "title": "Zugriff ab",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "kommentar": {
+      "type": "string",
+      "title": "Optionale Nachricht",
+      "description": "Optionale Nachricht",
+      "maxLength": 2000
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Accounts Payable List (Demo)",
+  "description": "List incoming invoices and credits.",
+  "quicksearch": false,
+  "input": "property.value.expression?from=global/app/demo/object/invoice/v1/instance/*",
+  "schema": "property.list?filter=global/app/demo/object/invoice/v1/schema"
+}

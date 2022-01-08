@@ -1,0 +1,109 @@
+{
+  "type": "object",
+  "properties": {
+    "uuid": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      },
+      "description": "The unique id of this entry, automatically generated at server side."
+    },
+    "firstName": {
+      "type": "string",
+      "piStyle": {
+        "href": "#/form?key=global%2Fapp%2Fdemo%2Fform%2Fshowcase&input=property.list%3Ffilter%3Dglobal%2Fapp%2Fdemo%2Fobject%2Fshowcase%2Fv1%2Finstance%2F${row.uuid}&output=global%2Fapp%2Fdemo%2Fobject%2Fshowcase%2Fv1%2Finstance%2F${row.uuid}"
+      }
+    },
+    "lastName": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "male",
+        "female",
+        "neutral"
+      ]
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "time": {
+      "type": "string",
+      "format": "time"
+    },
+    "file1": {
+      "type": "object",
+      "piStyle": {
+        "hidden": true
+      },
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "file2": {
+      "type": "object",
+      "piStyle": {
+        "hidden": true
+      },
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "pdfFile": {
+      "type": "object",
+      "piStyle": {
+        "hidden": true
+      },
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

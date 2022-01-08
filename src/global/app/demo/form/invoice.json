@@ -1,0 +1,105 @@
+{
+  "title": "Accounts Payable Form (Demo)",
+  "description": "Add incoming invoice or credit.",
+  "schema": "property.list?filter=global/app/demo/object/invoice/v1/schema",
+  "output": "global/app/demo/object/invoice/v1/instance/%23%7Bvar.property.uuid%7D",
+  "script": {
+    "onload": "if (form.documentType == 'invoice' && form.supplier != null) { var response = await pi.pipeline('property.value.expression?from=global/app/demo/object/invoice/v1/instance/*&where=documentType%3D%3D%27credit%27%20and%20supplier%3D%3D%27' + form.supplier + '%27'); if (response) { schema.properties.credits.items.enum = response.map((item) => item.amount) } else { schema.properties.credits.items.enum = [];  }  }",
+    "onblur": "form.clearedAmount = form.amount - pi.sum(form.credits); if ((src === 'supplier' || src === 'documentType') && form.documentType == 'invoice') { var response = await pi.pipeline('property.value.expression?from=global/app/demo/object/invoice/v1/instance/*&where=documentType%3D%3D%27credit%27%20and%20supplier%3D%3D%27' + form.supplier + '%27'); if (response) { schema.properties.credits.items.enum = response.map((item) => item.amount) } else { schema.properties.credits.items.enum = [];  }  }"
+  },
+  "layout": {
+    "orientation": "horizontal",
+    "items": [
+      {
+        "orientation": "vertical",
+        "items": [{
+          "field": "documentType",
+          "width": "150",
+          "bgColor": "yellow",
+          "color": "blue",
+          "icon": "event",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        },{
+          "field": "amount",
+          "width": "200",
+          "bgColor": "yellow",
+          "color": "blue",
+          "icon": "event",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        },{
+          "field": "uuid",
+          "bgColor": "yellow",
+          "color": "blue",
+          "readonly": true,
+          "icon": "event"
+        },{
+          "field": "supplier",
+          "bgColor": "yellow",
+          "color": "blue",
+          "icon": "event",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          },{
+            "type":"js", "rule":"val.length <= 3", "message": "Please use max. 3 characters"
+          }]
+        },{
+          "field": "credits",
+          "bgColor": "yellow",
+          "color": "blue",
+          "icon": "event"
+        },{
+          "field": "clearedAmount",
+          "width": 200,
+          "bgColor": "yellow",
+          "color": "blue",
+          "readonly": true,
+          "icon": "event"
+        },{
+          "field": "paid",
+          "bgColor": "yellow",
+          "color": "blue",
+          "icon": "event",
+          "readonly": true
+        },{
+          "field": "file1",
+          "bgColor": "yellow",
+          "color": "blue",
+          "render": "filepicker",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        },{
+          "orientation": "horizontal",
+          "items": [
+            {
+              "field": "buttonNo",
+              "icon": "clear",
+              "render": "button"
+            },{
+              "field": "buttonYes",
+              "icon": "done",
+              "render": "button"
+            }]
+        }]
+      },
+      {
+        "orientation": "vertical",
+        "width": "700",
+        "items": [{
+          "field": "pdfFile",
+          "height": "550",
+          "bgColor": "yellow",
+          "color": "blue",
+          "render": "pdfviewer",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        }]
+      }
+    ]
+  }
+}

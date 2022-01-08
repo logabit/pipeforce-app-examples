@@ -1,0 +1,11 @@
+{
+  "title": "Bewerbungsportal",
+  "description": "Senden Sie uns Ihre Bewerbung über einen sicheren Kanal.",
+  "icon": "portrait",
+  "tags": [
+    "hr", "unterlagen"
+  ],
+  "show": "CAN_APP_APPLICATIONFORM",
+  "editions": ["basic", "enterprise"],
+  "recipient": "$uri:property:global/app/admin/object/common/v1/instance/data#defaultFormRecipient"
+}

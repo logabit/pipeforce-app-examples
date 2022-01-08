@@ -1,0 +1,12 @@
+{
+  "title": "IT-Support",
+  "description": "Erstellen Sie neue Anfragen an den IT-Support.",
+  "icon": "headset_mic",
+  "tags": [
+    "access", "zugansdaten", "anmelden", "passwort vergessen", "vergessen",
+    "hilfe", "service", "support", "fehler melden", "laptop", "notebook", "pc", "monitor", "software", "hardware", "telefon", "handy", "rufumleitung"
+  ],
+  "show": "CAN_APP_ITSUPPORT",
+  "editions": ["basic", "enterprise"],
+  "recipient": "\"$uri:property:global/app/admin/object/common/v1/instance/data#defaultFormRecipient"
+}

@@ -1,0 +1,126 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "name": {
+      "title": "Task Name",
+      "type": "string",
+      "piStyle": {
+        "href": "${env.workflowBaseUrl}app/tasklist/default/#"
+      }
+    },
+    "assignee": {
+      "title": "Assignee",
+      "type": "string"
+    },
+    "created": {
+      "title": "Created",
+      "type": "string"
+    },
+    "due": {
+      "title": "Due",
+      "type": "string"
+    },
+    "followUp": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "delegationState": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "description": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "executionId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "owner": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "parentTaskId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "priority": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "processDefinitionId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "processInstanceId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "taskDefinitionKey": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "caseExecutionId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "caseInstanceId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "caseDefinitionId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "suspended": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "formKey": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    },
+    "tenantId": {
+      "type": "string",
+      "piStyle": {
+        "hidden": true
+      }
+    }
+  }
+}

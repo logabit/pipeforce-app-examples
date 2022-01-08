@@ -1,0 +1,17 @@
+{
+  "title": "Block",
+  "description": "Moves article into reservation stock.",
+  "schema": "property.list?filter=global/app/weclapp/object/article-action/v1/schema",
+  "output": "global/app/weclapp/object/article-action/v1/instance/%23%7Bvar.property.uuid%7D",
+  "script": {
+    "onload": "form.action = 'block'"
+  },
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "serialNumber"
+      }
+    ]
+  }
+}

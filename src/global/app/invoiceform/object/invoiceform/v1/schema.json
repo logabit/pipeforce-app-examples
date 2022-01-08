@@ -1,0 +1,47 @@
+{
+  "type": "object",
+  "properties": {
+    "senderName": {
+      "type": "string",
+      "title": "Ihre Firma *",
+      "description": "Vollständige Firmenbezeichnung"
+    },
+    "senderEmail": {
+      "type": "string",
+      "title": "Ihre E-Mail *",
+      "description": "Ihre Email-Adresse für Rückfragen",
+      "format": "email"
+    },
+    "bestellung": {
+      "type": "string",
+      "title": "Bestellnummer *",
+      "description": "Vertrags- oder Bestellnummer"
+    },
+    "nachricht": {
+      "title": "Nachricht",
+      "type": "string",
+      "maxLength": 2000
+    },
+    "rechnung": {
+      "type": "object",
+      "title": "Rechnung *",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

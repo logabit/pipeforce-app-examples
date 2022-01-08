@@ -1,0 +1,10 @@
+pipeline:
+  - event.listen:
+      key: "property.created"
+      filter: "#{body.target.key.contains('global/app/itsupport/object/accessrequestform/v1/instance')}"
+  - mail.send:
+      to:
+        - "#{@property.lazy('global/app/itsupport/config/itsupport#recipient')}"
+      subject: "Formular IT-Zugriff-Anfrage wurde ausgefüllt"
+      message: "uri:property:global/app/itsupport/template/accessrequestform-message"
+      model: "uri:property:#{body.target.key}"

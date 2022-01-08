@@ -1,0 +1,25 @@
+pipeline:
+    # Listen for form submit
+    - event.listen:
+        key: "property.created"
+        filter: "#{body.target.key.contains('global/app/serverroom/object/accessprotocol/v1/instance')}"
+
+    # Update current user and date in the protocol
+    - set:
+        input: "#{body.target.value}" # Provided by the event
+        mapping: "
+            employee: @user.displayName(),
+            dateTime: @date.now()
+            "
+        output: "#{vars.protocol}" # Store result into vars
+
+    # Save protocol with current user and date to database
+    - property.put:
+        key: "#{body.target.key}"
+        value: "#{vars.protocol}"
+
+    # Send email
+    - mail.send:
+        to: "#{#{@property.value('global/app/serverroom/config/app').emails}}" # Read from settings
+        subject: "Serverraum wurde #{vars.protocol.action} von: #{@user.displayName()}"
+        message: "Der Serverraum wurde von Mitarbeiter #{@user.emailAndDisplayName()} am #{vars.protocol.dateTime} #{vars.protocol.action}."

@@ -1,0 +1,82 @@
+{
+  "type": "object",
+  "properties": {
+    "antragsteller": {
+      "type": "string",
+      "title": "Ihr Name *",
+      "description": "Vorname, Nachanme"
+    },
+    "reiseziel": {
+      "type": "string",
+      "title": "Reiseziel *",
+      "description": "Reiseziel (Stadt, Land)"
+    },
+    "reisegrund": {
+      "title": "Reisegrund *",
+      "type": "string",
+      "description": "Was war der Grund dieser Geschäftsreise?",
+      "maxLength": 2000
+    },
+    "reisezeitVon": {
+      "type": "string",
+      "title": "Reisezeit (von) *",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "reisezeitBis": {
+      "type": "string",
+      "title": "Reisezeit (bis) *",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "ausgabeBeschreibung": {
+      "type": "string",
+      "title": "Ausgabe-Beschreibung *",
+      "description": "Kurze Beschreibung der Ausgabe."
+    },
+    "ausgabeTyp": {
+      "type": "string",
+      "title": "Ausgabe-Art *",
+      "description": "Bitte wählen Sie die Art der Ausgabe.",
+      "enum": [
+        "ÖNV-Ticket",
+        "Taxi",
+        "Flug",
+        "Übernachtung",
+        "Verpflegung",
+        "Andere"
+      ]
+    },
+    "betrag": {
+      "title": "Betrag Brutto (€) *",
+      "type": "number",
+      "description": "Der Betrag der Auslage, wie auf dem Beleg."
+    },
+    "beleg": {
+      "type": "object",
+      "title": "Beleg *",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "kommentar": {
+      "title": "Optionale Nachricht",
+      "type": "string",
+      "maxLength": 2000
+    }
+  }
+}

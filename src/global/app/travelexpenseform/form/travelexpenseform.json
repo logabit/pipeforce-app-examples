@@ -1,0 +1,91 @@
+{
+  "id": "travelexpenseform",
+  "public": false,
+  "title": "Neue Erstattung",
+  "description": "Nutzen Sie dieses Formular, um Ihre Reisekosten einzureichen.",
+  "schema": "property.list?filter=global/app/travelexpenseform/object/travelexpenseform/v1/schema",
+  "output": "global/app/travelexpenseform/object/travelexpenseform/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "antragsteller",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "reiseziel",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "reisegrund",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "reisezeitVon",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "reisezeitBis",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "ausgabeBeschreibung",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "ausgabeTyp",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte Datum auswählen"
+          }
+        ]
+      },
+      {
+        "field": "betrag",
+        "mask": "#.##",
+        "fillMask": "0",
+        "step": "0.01",
+        "min": "0",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "beleg",
+        "render": "filepicker",
+        "validation": [{
+          "type":"js", "rule": "!!val", "message": "Bitte angeben"
+        }]
+      },
+      {
+        "field": "kommentar"
+      }
+    ]
+  }
+}

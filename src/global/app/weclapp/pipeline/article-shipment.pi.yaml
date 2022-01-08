@@ -1,0 +1,34 @@
+vars:
+  config: "#{@property.value('global/app/weclapp/config/app').config}"
+
+pipeline:
+
+  - event.listen:
+      key: "property.created"
+      filter: "#{body.target.key.contains('global/app/weclapp/object/article-action/v1/instance') and body.target.value.action == 'shipment'}"
+
+  - iam.run.as:
+      username: systemuser
+
+  - http.post:
+      url: "https://#{vars.config.wclTenantId}.weclapp.com/webapp/api/v1/warehouseStockMovement/bookOutgoingMovement"
+      headers: "AuthenticationToken: #{vars.config.wclAuthenticationToken}"
+      body: |
+        {
+          "articleId": "#{vars.config.wclDefaultArticleId}",
+          "quantity": "1",
+          "sourceWarehouseLevelId": "#{vars.config.wclMainWarehouseLevelId}",
+          "serialNumbers": [
+            "#{body.target.value.serialNumber}"
+          ]
+        }
+
+  - http.get:
+      url: "https://#{vars.config.wclTenantId}.weclapp.com/webapp/api/v1/shipment"
+      headers: "AuthenticationToken: #{vars.config.wclAuthenticationToken}"
+      output: "#{vars.shipments}"
+
+  - set.var:
+      name: "shipment"
+      value: "#{vars.shipments.result?[shipmentItems?[] == 'Maggie Simpson']}"
+

@@ -1,0 +1,11 @@
+{
+  "title": "Barcode",
+  "description": "Create barcodes",
+  "icon": "qr_code_2",
+  "tags": [
+    "barcode"
+  ],
+  "editions": [
+    "enterprise"
+  ]
+}

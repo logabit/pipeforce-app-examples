@@ -1,0 +1,12 @@
+pipeline:
+  - event.listen:
+      key: "property.created"
+      filter: "#{body.target.key.contains('global/app/applicationform/object/applicationform/v1/instance')}"
+  - property.send.delivery:
+      key: "#{body.target.key}"
+      message: "uri:property:global/app/applicationform/template/applicationform-message"
+      subject: "Formular Bewerbungsportal wurde ausgefüllt"
+      model: "uri:property:#{body.target.key}"
+      privacyLevel: "L02_CREDENTIALS"
+      recipients:
+        - "#{@property.lazy('global/app/applicationform/config/applicationform#recipient')}"

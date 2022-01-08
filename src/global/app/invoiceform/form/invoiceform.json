@@ -1,0 +1,47 @@
+{
+  "id": "invoiceform",
+  "public": false,
+  "title": "Rechnung einreichen",
+  "description": "Bitte nutzen Sie das Formular, um uns Ihre Rechnungen zu übermitteln.",
+  "schema": "property.list?filter=global/app/invoiceform/object/invoiceform/v1/schema",
+  "output": "global/app/invoiceform/object/invoiceform/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "senderName",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "senderEmail",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "bestellung",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "nachricht"
+      },
+      {
+        "field": "rechnung",
+        "render": "filepicker",
+        "validation": [{
+          "type":"js", "rule": "!!val", "message": "Bitte angeben"
+        }]
+      }
+    ]
+  }
+}

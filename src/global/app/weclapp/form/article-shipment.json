@@ -1,0 +1,20 @@
+{
+  "title": "Pick",
+  "description": "Mark an article as picked from stock.",
+  "schema": "property.list?filter=global/app/weclapp/object/article-action/v1/schema",
+  "output": "global/app/weclapp/object/article-action/v1/instance/%23%7Bvar.property.uuid%7D",
+  "script": {
+    "onload": "form.action = 'shipment'"
+  },
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "serialNumber"
+      },
+      {
+        "field": "trackingId"
+      }
+    ]
+  }
+}

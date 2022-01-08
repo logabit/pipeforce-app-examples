@@ -1,0 +1,7 @@
+pipeline:
+  - iam.run.as:
+      username: "systemuser"
+  # From 6.0 to 7.0
+  # Config was renamed to app.json
+  - property.schema.delete:
+      key: "global/app/applicationform/config/applicationform"

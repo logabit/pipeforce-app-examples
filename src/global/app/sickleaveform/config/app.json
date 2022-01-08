@@ -1,0 +1,11 @@
+{
+  "title": "Krankmeldung",
+  "description": "Reichen Sie unkompliziert und sicher Ihre Krankmeldung ein.",
+  "icon": "local_hospital",
+  "tags": [
+    "ärztliche bescheinigung", "belege", "verhindert"
+  ],
+  "show": "CAN_APP_SICKLEAVEFORM",
+  "editions": ["basic", "enterprise"],
+  "recipient": "\"$uri:property:global/app/admin/object/common/v1/instance/data#defaultFormRecipient"
+}

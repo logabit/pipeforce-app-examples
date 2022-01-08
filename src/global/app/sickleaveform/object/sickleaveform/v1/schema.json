@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "antragsteller": {
+      "type": "string",
+      "title": "Ihr Name *",
+      "description": "Vorname, Nachanme"
+    },
+    "krankmeldungAb": {
+      "type": "string",
+      "title": "Krankmeldung ab *",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "krankmeldungBis": {
+      "type": "string",
+      "title": "Krankmeldung bis (voraussichtlich) *",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "datei": {
+      "type": "object",
+      "title": "Datei *",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

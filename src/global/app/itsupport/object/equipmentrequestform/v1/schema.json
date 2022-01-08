@@ -1,0 +1,43 @@
+{
+  "type": "object",
+  "properties": {
+    "antragsteller": {
+      "type": "string",
+      "title": "Ihr Name *",
+      "description": "Vorname, Nachname"
+    },
+    "genehmigtDurch": {
+      "type": "string",
+      "title": "Genehmigt durch *",
+      "description": "Vorname, Nachname"
+    },
+    "geraetTyp": {
+      "type": "string",
+      "title": "Geräte-Typ *",
+      "description": "Bitte wählen Sie aus, welche Ressource Sie benötigen.",
+      "enum": [
+        "Mobiltelefon",
+        "Desktop PC",
+        "Laptop",
+        "Token",
+        "Andere"
+      ]
+    },
+    "beschreibung": {
+      "type": "string",
+      "title": "Beschreibung",
+      "description": "Beschreibung"
+    },
+    "bedarfAb": {
+      "type": "string",
+      "title": "Bedarf ab",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "kommentar": {
+      "title": "Optionale Nachricht",
+      "type": "string",
+      "maxLength": 2000
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "title": "Vue",
+  "description": "Sample vue form",
+  "output": "global/app/demo/object/vue/v1/instance/%23%7Bvar.property.uuid%7D",
+  "script": {
+    "type": "vue",
+    "path": "global/app/demo/script/sample"
+  }
+}

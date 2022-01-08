@@ -1,0 +1,72 @@
+{
+  "type": "object",
+  "properties": {
+    "vorname": {
+      "type": "string",
+      "title": "Ihr Vorname *",
+      "description": "Ihr Vorname"
+    },
+    "nachname": {
+      "type": "string",
+      "title": "Ihr Nachname *",
+      "description": "Ihr Nachname"
+    },
+    "email": {
+      "type": "string",
+      "title": "Ihre E-Mail *",
+      "description": "Ihre E-Mail",
+      "format": "email"
+    },
+    "telefonnummer": {
+      "type": "string",
+      "title": "Ihre Telefonnummer *",
+      "description": "Ihre Telefonnummer"
+    },
+    "stellenbezeichnung": {
+      "type": "string",
+      "title": "Stellenbezeichnung *",
+      "description": "Die Stellenbezeichnung / Referenz auf die Sie sich bewerben möchten"
+    },
+    "startdate": {
+      "type": "string",
+      "title": "Ihr frühester Eintrittstermin *",
+      "description": "tt.mm.jjjj",
+      "format": "date"
+    },
+    "nachricht": {
+      "title": "Optionale Nachricht",
+      "type": "string",
+      "maxLength": 2000
+    },
+    "bewerbungsunterlagen": {
+      "type": "object",
+      "properties": {
+        "filename": {
+          "type": "string"
+        },
+        "contentLength": {
+          "type": "number"
+        },
+        "contentType": {
+          "type": "string"
+        },
+        "contentEncoding": {
+          "type": "string"
+        },
+        "content": {
+          "type": "string"
+        }
+      }
+    },
+    "kontakt": {
+      "type": "boolean",
+      "title": "Ich stimme zu, im Rahmen meiner Bewerbung per E-Mail und Telefon kontaktiert zu werden.",
+      "description": "Ich stimme zu, im Rahmen meiner Bewerbung per E-Mail und Telefon kontaktiert zu werden."
+    },
+    "datenschutz": {
+      "type": "boolean",
+      "title": "Ich erteile die Einwilligung in die Erhebung und Nutzung meiner vorstehend eingegebenen Daten gemäß den Datenschutzbestimmungen.",
+      "description": "Ich erteile die Einwilligung in die Erhebung und Nutzung meiner vorstehend eingegebenen Daten gemäß den Datenschutzbestimmungen."
+    }
+  }
+}

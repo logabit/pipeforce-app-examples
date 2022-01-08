@@ -1,0 +1,11 @@
+{
+  "title": "Reisekostenabrechnung",
+  "description": "Rechnen Sie unkompliziert Ihre Reisekosten ab.",
+  "icon": "flight",
+  "tags": [
+    "belege", "hotel", "zug", "flug", "abrechnung", "geschäftsreise"
+  ],
+  "show": "CAN_APP_TRAVELEXPENSEFORM",
+  "editions": ["basic", "enterprise"],
+  "recipient": "$uri:property:global/app/admin/object/common/v1/instance/data#defaultFormRecipient"
+}

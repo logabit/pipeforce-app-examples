@@ -1,0 +1,19 @@
+{
+  "title": "Weclapp ERP",
+  "description": "Weclapp ERP Integration Demo",
+  "icon": "assignment",
+  "tags": [
+    "weclapp", "erp", "block", "unblock", "reserve", "pick", "shipment"
+  ],
+  "editions": [
+    "enterprise"
+  ],
+  "config": {
+    "wclDefaultArticleId": "30718",
+    "wclAuthenticationToken": "8cef01c7-ea47-4d68-9bfa-ee8992b5fda5",
+    "wclTenantId": "xyomoovyynpsmjc",
+    "wclMainWarehouseLevelId": "30739",
+    "wclReservationWarehouseLevelId": "30705"
+  }
+}
+

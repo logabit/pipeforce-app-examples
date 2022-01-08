@@ -1,0 +1,46 @@
+{
+  "id": "equipmentrequestform",
+  "public": false,
+  "title": "Neuer IT-Bedarf",
+  "description": "Bitte nutzen Sie das Formular, um eine IT-Bedarfsanfrage zu stellen.",
+  "schema": "property.list?filter=global/app/itsupport/object/equipmentrequestform/v1/schema",
+  "output": "global/app/itsupport/object/equipmentrequestform/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "antragsteller",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "genehmigtDurch",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "geraetTyp",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "beschreibung"
+      },
+      {
+        "field": "bedarfAb"
+      },
+      {
+        "field": "kommentar"
+      }
+    ]
+  }
+}

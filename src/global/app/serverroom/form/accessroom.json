@@ -1,0 +1,14 @@
+{
+  "title": "Zutritt",
+  "description": "Den Zutritt des Raums protokollieren.",
+  "schema": "property.list?filter=global/app/serverroom/object/accessprotocol/v1/schema",
+  "output": "global/app/serverroom/object/accessprotocol/v1/instance/%23%7Bvar.property.uuid%7D",
+  "script": {
+    "onload": "form.action = 'betreten'"
+  },
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+    ]
+  }
+}

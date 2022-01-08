@@ -1,0 +1,44 @@
+{
+  "id": "sickleaveform",
+  "public": false,
+  "title": "Krankmeldung einreichen",
+  "description": "Bitte nutzen Sie das Formular, um Ihre Krankmeldung einzureichen.",
+  "schema": "property.list?filter=global/app/sickleaveform/object/sickleaveform/v1/schema",
+  "output": "global/app/sickleaveform/object/sickleaveform/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "antragsteller",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "krankmeldungAb",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "krankmeldungBis",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "datei",
+        "render": "filepicker",
+        "validation": [{
+          "type":"js", "rule": "!!val", "message": "Bitte angeben"
+        }]
+      }
+    ]
+  }
+}

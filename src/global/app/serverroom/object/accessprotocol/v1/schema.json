@@ -1,0 +1,20 @@
+{
+  "type": "object",
+  "properties": {
+    "employee": {
+      "title": "Mitarbeiter",
+      "type": "string",
+      "description": "Name des Mitarbeiters"
+    },
+    "action": {
+      "title": "Aktion",
+      "description": "Betreten oder Verlassen",
+      "type": "string",
+      "enum":["betreten", "verlassen"]
+    },
+    "dateTime": {
+      "title": "Zeitpunkt",
+      "type": "string"
+    }
+  }
+}

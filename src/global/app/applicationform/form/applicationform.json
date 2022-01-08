@@ -1,0 +1,83 @@
+{
+  "id": "applicationform",
+  "public": false,
+  "title": "Bewerbung einreichen",
+  "description": "Bitte nutzen Sie das Formular, um uns Ihre Bewerbungsunterlagen zu übermitteln.",
+  "schema": "property.list?filter=global/app/applicationform/object/applicationform/v1/schema",
+  "output": "global/app/applicationform/object/applicationform/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "vertical",
+    "items": [
+      {
+        "field": "vorname",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "nachname",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "email",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "telefonnummer",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "stellenbezeichnung",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte angeben"
+          }
+        ]
+      },
+      {
+        "field": "startdate",
+        "validation": [
+          {
+            "type": "js", "rule": "!!val", "message": "Bitte Datum auswählen"
+          }
+        ]
+      },
+      {
+        "field": "nachricht"
+      },
+      {
+        "field": "bewerbungsunterlagen",
+        "render": "filepicker",
+        "validation": [{
+          "type":"js", "rule": "!!val", "message": "Bitte angeben"
+        }]
+      },
+      {
+        "field": "kontakt",
+        "validation": [{
+          "type":"js", "rule": "val === true", "message": "Bitte akzeptieren"
+        }]
+      },
+      {
+        "field": "datenschutz",
+        "validation": [{
+          "type":"js", "rule": "val === true", "message": "Bitte akzeptieren"
+        }]
+      }
+    ]
+  }
+}

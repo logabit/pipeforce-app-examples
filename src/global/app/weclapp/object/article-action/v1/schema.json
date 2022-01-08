@@ -1,0 +1,25 @@
+{
+  "type": "object",
+  "properties": {
+    "serialNumber": {
+      "title": "Serial Number",
+      "type": "string",
+      "description": "The serial number of the article"
+    },
+    "action": {
+      "title": "Action",
+      "description": "The action with the article",
+      "type": "string",
+      "enum": [
+        "shipment",
+        "block",
+        "unblock"
+      ]
+    },
+    "trackingId": {
+      "title": "Tracking ID",
+      "type": "string",
+      "description": "The tracking ID of the shipment"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "title": "Public",
+  "description": "Public form submissions list.",
+  "quicksearch": false,
+  "input": "property.value.expression?from=global/app/demo/object/showcase/v1/instance/*",
+  "schema": "property.list?filter=global/app/demo/object/showcase/v1/schema"
+}

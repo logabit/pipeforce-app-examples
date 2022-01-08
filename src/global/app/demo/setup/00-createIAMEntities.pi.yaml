@@ -1,0 +1,16 @@
+headers:
+  description: "Creates the IAM roles, groups aso. for this app."
+  runWhen: "#{not @instance.profiles().contains('test')}"
+  onCommandError: IGNORE
+
+pipeline:
+
+  - iam.run.as:
+      username: "systemuser"
+
+  - iam.role.create:
+      name: "CAN_APP_DEMO"
+
+  - iam.role.add.composites:
+      roleName: "ROLE_DEVELOPER"
+      composites: "CAN_APP_DEMO"

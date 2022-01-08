@@ -1,0 +1,6 @@
+{
+  "title": "Create barcode",
+  "description": "Creates a new barcode and saves it in Drive as PNG",
+  "schema": "property.list?filter=global/app/barcode/object/barcode/v1/schema",
+  "output": "global/app/barcode/object/barcode/v1/instance/%23%7Bvar.property.uuid%7D"
+}

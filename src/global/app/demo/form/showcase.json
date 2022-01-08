@@ -1,0 +1,64 @@
+{
+  "id": "showcase",
+  "public": true,
+  "title": "Person",
+  "description": "Publicly available form example.",
+  "schema": "property.list?filter=global/app/demo/object/showcase/v1/schema",
+  "output": "global/app/demo/object/showcase/v1/instance/%23%7Bvar.property.uuid%7D",
+  "layout": {
+    "orientation": "horizontal",
+    "items": [
+      {
+        "orientation": "vertical",
+        "items": [{
+          "field": "firstName",
+          "validation": [
+            {
+              "type":"js", "rule": "!!val", "message": "Field is required"
+            },
+            {
+              "type":"vuevalidate"
+            }
+          ]
+        },{
+          "field": "lastName"
+        },{
+          "field": "age"
+        },{
+          "field": "gender"
+        },{
+          "field": "date"
+        },{
+          "field": "time"
+        },{
+          "field": "file1",
+          "render": "filepicker",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        },{
+          "field": "file2",
+          "render": "filepicker",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        },{
+          "field": "uuid",
+          "readonly": true
+        }]
+      },
+      {
+        "orientation": "vertical",
+        "width": "700",
+        "items": [{
+          "field": "pdfFile",
+          "height": "550",
+          "render": "pdfviewer",
+          "validation": [{
+            "type":"js", "rule": "!!val", "message": "Field is required"
+          }]
+        }]
+      }
+    ]
+  }
+}

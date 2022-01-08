@@ -1,0 +1,32 @@
+headers:
+  description: "Creates the IAM roles, groups aso. for this app."
+  runWhen: "#{not @instance.profiles().contains('test')}"
+  onCommandError: IGNORE
+
+pipeline:
+  
+  - iam.run.as:
+      username: "systemuser"
+
+  - iam.role.create:
+      name: "CAN_APP_BARCODE"
+
+  - iam.role.add.composites:
+      roleName: "CAN_APP_BARCODE"
+      composites: "CAN_PIPE_property.schema.put, CAN_PIPE_event.listen, CAN_PIPE_set, CAN_PIPE_send.mail, CAN_PIPE_property.value.expression"
+
+  - iam.role.add.composites:
+      roleName: "ROLE_SUPPORT"
+      composites: "CAN_APP_BARCODE"
+
+  - iam.role.add.composites:
+      roleName: "ROLE_DEVELOPER"
+      composites: "CAN_APP_BARCODE"
+
+  - iam.role.add.composites:
+      roleName: "ROLE_ADMIN"
+      composites: "CAN_APP_BARCODE"
+
+  - iam.role.add.composites:
+      roleName: "ROLE_EMPLOYEE"
+      composites: "CAN_APP_BARCODE"

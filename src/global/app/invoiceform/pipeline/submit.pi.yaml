@@ -1,0 +1,12 @@
+pipeline:
+  - event.listen:
+      key: "property.created"
+      filter: "#{body.target.key.contains('global/app/invoiceform/object/invoiceform/v1/instance')}"
+  - property.send.delivery:
+      key: "#{body.target.key}"
+      message: "uri:property:global/app/invoiceform/template/invoiceform-message"
+      subject: "Formular Rechnungseingang wurde ausgefüllt"
+      model: "uri:property:#{body.target.key}"
+      privacyLevel: "L02_CREDENTIALS"
+      recipients:
+        - "#{@property.lazy('global/app/invoiceform/config/invoiceform#recipient')}"
