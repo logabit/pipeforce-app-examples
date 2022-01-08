@@ -17,3 +17,5 @@ pi command app.install github=logabit/pipeforce-app-examples
 ```
 
 This will download and install all app resources from inside src/global/app folder.
+
+More information can be found on the documentation pages: https://pipeforce.github.io 
