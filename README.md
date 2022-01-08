@@ -15,7 +15,9 @@ Copy this access token to you clipboard.
 
 Copy the GitHub access token, open the PIPEFORCE portal and go to `LOW CODE -> Credentials` and create a new Credentials of type `header` with a name of your choice, for example `github-token` and as value use this format:
 
+```
 Authorization: token COPY_YOUR_TOKEN_HERE
+```
 
 ## Step 3: Install the example apps
 
