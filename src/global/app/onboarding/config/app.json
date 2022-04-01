@@ -1,0 +1,9 @@
+{
+  "title": "onboarding",
+  "description": "",
+  "icon": "assignment",
+  "tags": [
+  ],
+  "show": "CAN_APP_ONBOARDING",
+  "editions": ["basic", "enterprise"]
+}
