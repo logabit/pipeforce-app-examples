@@ -21,13 +21,9 @@ jobs:
     permissions:
       contents: write
     steps:
-    - name: Set tag
-      id: tag
-      run: echo ${GITHUB_SHA::8}
     - uses: actions/checkout@v2
-    - run: echo ${GITHUB_SHA}
     - name: "Create release"
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag: "RELEASE-${{ github.run_number }}"
+        tag: "${{ github.run_number }}.0.0"
