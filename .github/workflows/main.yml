@@ -26,4 +26,4 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        tag: "${{ github.run_number }}.0.0"
+        tag: "1.0.0-b${{ github.run_number }}"
