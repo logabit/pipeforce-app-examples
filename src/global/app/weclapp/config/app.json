@@ -5,6 +5,7 @@
   "tags": [
     "weclapp", "erp", "block", "unblock", "reserve", "pick", "shipment"
   ],
+  "show": "CAN_APP_WECLAPP",
   "editions": [
     "enterprise"
   ],

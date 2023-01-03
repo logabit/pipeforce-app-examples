@@ -5,6 +5,7 @@
   "tags": [
     "barcode"
   ],
+  "show": "CAN_APP_BARCODE",
   "editions": [
     "enterprise"
   ]
