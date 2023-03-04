@@ -1,0 +1,5 @@
+{
+  "propertiesHome" : "src",
+  "deployWithExtension": true,
+  "requiredVersion": "8.0"
+}
