@@ -7,5 +7,5 @@
   ],
   "show": "CAN_APP_EXTERNALINVOICEFORM",
   "editions": ["basic", "enterprise"],
-  "recipient": "\"$uri:property:global/app/admin/object/common/v1/instance/data#defaultFormRecipient"
+  "recipient": "\"$uri:property:global/app/io.pipeforce.admin/object/common/v1/instance/data#defaultFormRecipient"
 }
