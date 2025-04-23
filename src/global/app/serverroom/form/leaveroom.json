@@ -1,14 +1,13 @@
 {
-  "title": "Verlassen",
-  "description": "Das Verlassen des Raums protokollieren.",
-  "schema": "property.list?filter=global/app/serverroom/object/accessprotocol/v1/schema",
-  "output": "global/app/serverroom/object/accessprotocol/v1/instance/%23%7Bvar.property.uuid%7D",
-  "script": {
-    "onload": "form.action = 'verlassen'"
-  },
-  "layout": {
-    "orientation": "vertical",
-    "items": [
-    ]
-  }
+	"title": "Verlassen",
+	"description": "Das Verlassen des Raums protokollieren.",
+	"schema": "property.list?filter=global/app/serverroom/object/accessprotocol/v1/schema",
+	"output": "global/app/serverroom/object/accessprotocol/v1/instance/#{var.property.uuid}",
+	"script": {
+		"onload": "data.action = 'verlassen'"
+	},
+	"layout": {
+		"orientation": "vertical",
+		"items": []
+	}
 }
