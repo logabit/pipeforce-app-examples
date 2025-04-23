@@ -1,7 +1,7 @@
 {
-  "title": "Public",
-  "description": "Public form submissions list.",
-  "quicksearch": false,
-  "input": "property.value.expression?from=global/app/demo/object/showcase/v1/instance/*",
-  "schema": "property.list?filter=global/app/demo/object/showcase/v1/schema"
+	"title": "Public",
+	"description": "Public form submissions list.",
+	"quicksearch": false,
+	"input": "$uri:command:property.value.expression?from=global/app/demo/object/showcase/v1/instance/*",
+	"schema": "$uri:command:property.list?filter=global/app/demo/object/showcase/v1/schema"
 }
