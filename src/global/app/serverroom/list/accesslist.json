@@ -1,6 +1,6 @@
 {
-  "title": "Zutrittsprotokoll",
-  "description": "Übersicht, wer den Raum betreten hat.",
-  "input": "property.value.expression?from=global/app/serverroom/object/accessprotocol/v1/instance/*",
-  "schema": "property.list?filter=global/app/serverroom/object/accessprotocol/v1/schema"
+	"title": "Zutrittsprotokoll",
+	"description": "Übersicht, wer den Raum betreten hat.",
+	"input": "$uri:command:property.value.expression?from=global/app/serverroom/object/accessprotocol/v1/instance/*",
+	"schema": "$uri:command:property.list?filter=global/app/serverroom/object/accessprotocol/v1/schema"
 }
