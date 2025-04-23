@@ -1,7 +1,7 @@
 {
-  "title": "My Tasks",
-  "description": "List all open tasks assigned to you.",
-  "quicksearch": false,
-  "input": "workflow.tasks?assignee=#{@util.getLoggedInUser()}",
-  "schema": "property.list?filter=global/app/demo/object/mytasks/v1/schema"
+	"title": "My Tasks",
+	"description": "List all open tasks assigned to you.",
+	"quicksearch": false,
+	"input": "$uri:command:workflow.tasks?assignee=#{@util.getLoggedInUser()}",
+	"schema": "$uri:command:property.list?filter=global/app/demo/object/mytasks/v1/schema"
 }
