@@ -3,7 +3,7 @@ pipeline:
   # Listen for form submit
   - event.listen:
       key: "property.created"
-      filter: "#{body.target.key.contains('global/app/barcode/object/barcode/v1/instance')}"
+      filter: "#{body.target.path.contains('global/app/barcode/object/barcode/v1/instance')}"
 
   # Store form data in a variable
   - set:
