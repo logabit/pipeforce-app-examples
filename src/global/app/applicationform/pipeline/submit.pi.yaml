@@ -1,7 +1,7 @@
 pipeline:
   - event.listen:
       key: "property.created"
-      filter: "#{body.target.key.contains('global/app/applicationform/object/applicationform/v1/instance')}"
+      filter: "#{body.target.path.contains('global/app/applicationform/object/applicationform/v1/instance')}"
   - property.send.delivery:
       key: "#{body.target.key}"
       message: "uri:property:global/app/applicationform/template/applicationform-message"
