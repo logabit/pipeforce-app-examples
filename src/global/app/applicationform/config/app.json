@@ -2,10 +2,8 @@
   "title": "Bewerbungsportal",
   "description": "Senden Sie uns Ihre Bewerbung über einen sicheren Kanal.",
   "icon": "portrait",
-  "tags": [
-    "hr", "unterlagen"
-  ],
+  "tags": ["hr", "unterlagen"],
   "show": "CAN_APP_APPLICATIONFORM",
   "editions": ["basic", "enterprise"],
-  "recipient": "$uri:property:global/app/io.pipeforce.admin/object/common/v1/instance/data#defaultFormRecipient"
+  "recipient": "$uri:command:property.value.get?path=global/app/io.pipeforce.admin/data/settings#publicform.defaultFormRecipient"
 }
