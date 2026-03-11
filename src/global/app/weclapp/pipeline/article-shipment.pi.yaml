@@ -2,10 +2,9 @@ vars:
   config: "#{@property.value('global/app/weclapp/config/app').config}"
 
 pipeline:
-
   - event.listen:
       key: "property.created"
-      filter: "#{body.target.key.contains('global/app/weclapp/object/article-action/v1/instance') and body.target.value.action == 'shipment'}"
+      filter: "#{body.target.path.contains('global/app/weclapp/object/article-action/v1/instance') and body.target.value.action == 'shipment'}"
 
   - iam.run.as:
       username: systemuser
@@ -31,4 +30,3 @@ pipeline:
   - set.var:
       name: "shipment"
       value: "#{vars.shipments.result?[shipmentItems?[] == 'Maggie Simpson']}"
-

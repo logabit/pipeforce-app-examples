@@ -2,10 +2,9 @@ vars:
   config: "#{@property.value('global/app/weclapp/config/app').config}"
 
 pipeline:
-
   - event.listen:
       key: "property.created"
-      filter: "#{body.target.key.contains('global/app/weclapp/object/article-action/v1/instance') and body.target.value.action == 'block'}"
+      filter: "#{body.target.path.contains('global/app/weclapp/object/article-action/v1/instance') and body.target.value.action == 'block'}"
 
   - iam.run.as:
       username: systemuser
